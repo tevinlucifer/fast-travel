@@ -94,10 +94,8 @@ img { max-width: 100%; display: block; }
 .hero-art { position: relative; min-height: 380px; display: flex; align-items: center; }
 .hero-card { width: 100%; }
 .card-main { border-radius: var(--radius); box-shadow: var(--shadow); background: var(--card); border: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; gap: 18px; }
-.card-badge { align-self: flex-end; font-size: .8rem; font-weight: 600; color: var(--green); }
 .car-frame { border-radius: 10px; overflow: hidden; background: var(--ivory-tint); }
 .car-frame img { width: 100%; }
-.car-label { text-align: center; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; color: var(--muted); margin: 0; }
 .card-note { display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; background: var(--green-soft); border-radius: 999px; padding: 8px 14px; font-size: .8rem; font-weight: 600; color: var(--green); }
 
 /* ---------- Sections ---------- */
@@ -133,19 +131,20 @@ img { max-width: 100%; display: block; }
 /* Destinations */
 .dest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .dest-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
-.dest-emoji { font-size: 1.8rem; }
-.dest-card h4 { margin: 12px 0 4px; font-size: 1rem; }
+.dest-img { width: 100%; height: 120px; object-fit: cover; border-radius: 10px; margin-bottom: 14px; }
+.dest-card h4 { margin: 0 0 4px; font-size: 1rem; }
 .dest-card p { font-size: .85rem; opacity: .7; margin: 0 0 10px; }
 .dest-time { font-size: .78rem; color: var(--teal); font-weight: 600; }
 
 /* Fleet */
-.fleet-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
-.fleet-photo { position: relative; background: var(--green-soft); border-radius: var(--radius); padding: 30px; }
-.fleet-price { position: absolute; bottom: -18px; left: 24px; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 12px 20px; font-size: .8rem; }
-.fleet-price strong { display: block; font-family: var(--serif); font-size: 1.3rem; color: var(--green); }
-.spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; margin: 22px 0; }
-.spec-grid h5 { margin: 0; font-size: .95rem; }
-.spec-grid span { font-size: .8rem; opacity: .65; }
+.vehicle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.vehicle-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.vehicle-icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 10px; background: var(--green-soft); color: var(--green); margin-bottom: 16px; }
+.vehicle-card h3 { font-size: 1.1rem; }
+.vehicle-card > p { font-size: .92rem; opacity: .75; }
+.vehicle-card .tag-list { margin: 16px 0; }
+.vehicle-card .tag-list li { font-size: .78rem; padding: 6px 12px; }
+.vehicle-card .price { display: block; font-weight: 700; color: var(--green); font-size: .95rem; }
 
 /* Booking */
 .booking-form { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 36px; max-width: 760px; }
@@ -191,9 +190,9 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .hero-grid, .about-grid, .fleet-grid { grid-template-columns: 1fr; }
+  .hero-grid, .about-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
-  .service-grid, .dest-grid, .testimonial-grid, .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid, .dest-grid, .testimonial-grid, .contact-grid, .vehicle-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-art { min-height: 320px; margin-top: 20px; }
 }
 @media (max-width: 640px) {
@@ -201,6 +200,6 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .nav.is-open { display: flex; }
   .nav-toggle { display: flex; }
   .header-actions .btn-small { display: none; }
-  .feature-grid, .service-grid, .dest-grid, .testimonial-grid, .contact-grid, .form-row, .spec-grid { grid-template-columns: 1fr; }
+  .feature-grid, .service-grid, .dest-grid, .testimonial-grid, .contact-grid, .form-row, .vehicle-grid { grid-template-columns: 1fr; }
   .stats { gap: 24px; }
 }
